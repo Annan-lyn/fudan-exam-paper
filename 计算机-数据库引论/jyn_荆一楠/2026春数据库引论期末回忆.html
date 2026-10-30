@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>学生期末试卷回忆</title><style>body{max-width:960px;margin:3em auto;padding:0 1em;font:16px/1.8 system-ui}pre{white-space:pre-wrap;font:inherit;overflow-wrap:anywhere}</style><h1>学生期末试卷回忆</h1><p>树洞#680017 F15 · 匿名作者 · 学生回忆，非官方试卷。来源：<a href="https://www.fduhole.com/hole/680017">树洞原帖</a>；<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，仅调整排版。</p><pre># 《数据库引论》2026春期末试卷
+
+**授课教师**：荆一楠 jyn
+
+---
+
+## 一、填空题（20分，每空2分）
+
+1. 调度的优先图中出现（*有向圈*），说明该调度是不冲突可串行化的；
+2. 二阶段锁协议的两个阶段分别是扩张阶段和（*收缩*）阶段；
+3. RAID 1 使用了（*镜像*）技术以提高可靠性；
+4. 可以根据（*等待图？锁协议？这一空不确定*）判断一个调度是否会引发死锁；
+5. Grace Hash Join 分为 Partition 阶段和（*Build/Probe，这空没填对，PPT里没有！*）阶段；
+6. 一组属性 $A$，能够唯一确定每个元组，则 $A$ 称为（*超键*）；
+7. 忘了一道
+8. 聚合函数 avg 会忽略（*NULL*）值；
+9. SQL 语句中去除查询结果中的重复数据要用关键字（*distinct*）；
+10. 对于满足 BCNF 的一个非平凡函数依赖 $X\rightarrow Y$，$X$ 一定属于某个（*主键*）。
+
+---
+
+## 二、单项选择题（10分，每题2分）
+
+1. 哪一个不属于事务的状态？
+	A. committed    B. aborted    C. active    D. 显然错误，忘了
+2. 动态规划查询优化利用了哪个性质？
+	A. 贪心算法    B. 最优子结构    C 和 D 忘了，显然错
+3. $X\rightarrow Y$ 等价于
+	A. $X\subseteq Y^+$    C.  $Y\subseteq X^+$    B 和 D 忘了，显然错
+4. Left Deep Join Trees，右子树是什么？
+	A. 任意的    B. 基本关系    C. ……
+5. 忘了
+
+---
+
+## 三、名词解释（15分，每题3分） 
+
+1. 冲突可串行化
+2. 基数
+3. 密集索引（Dense Index）
+4. Interesting Sort Order
+5. 事务的隔离性
+
+---
+
+## 四、简答题（20分，每题4分）
+
+1. 为什么 B+ 树比二叉搜索树更适合作数据库索引？
+2. 简述四种隔离级别（Serializable, Repeatable read, Read committed, Read uncommitted，这四个要自己写出来而不是试卷上给的）；
+3. 简述意图锁的作用；
+4. 为什么查询优化常用 Left Deep Join Trees？
+5. Grace Hash Join 的 Partition 阶段为什么重要？
+
+---
+
+## 五、综合题（35分，共2题）
+
+1. **SQL 语句和查询代价的计算**，四张表（部分没用的属性省略了）：Employee(Eid, Ename, Did)、Department(Did, Dname, City)、Works(Eid, Pid)、Project(Pid, Pname)
+	- 关系代数：在上海的部门工作的所有员工姓名；
+	- SQL 三道题：考了筛选出参加过所有 Project 的员工姓名（except）、对各个部门计算员工人数和平均工资并按平均工资排序
+	- 两个表的链接，使用**块嵌套循环连接**，缓冲区大小 $M=52$，外表 Project 有 100 条记录，内表 Employee 有 3000 条记录，计算块传输数量和磁盘寻道次数。
+
+2. **调度和死锁**：T1 和 T2 两个事务
+	- 按照二阶段锁协议，补充加锁、升级降级、解锁等操作；
+	- 是否可能发生死锁？为什么？
+	- 写出 Strict two-phase locking protocol 的要求、性质，它是否保证无死锁？
+	- 简要介绍缓解死锁的方法，至少两种方法，以上述两个事务为例说明。</pre></html>

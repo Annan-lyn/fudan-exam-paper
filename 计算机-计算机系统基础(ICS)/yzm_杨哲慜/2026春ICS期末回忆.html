@@ -1,0 +1,100 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>学生期末试卷回忆</title><style>body{max-width:960px;margin:3em auto;padding:0 1em;font:16px/1.8 system-ui}pre{white-space:pre-wrap;font:inherit;overflow-wrap:anywhere}</style><h1>学生期末试卷回忆</h1><p>树洞#680017 F11 · 匿名作者 · 学生回忆，非官方试卷。来源：<a href="https://www.fduhole.com/hole/680017">树洞原帖</a>；<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，仅调整排版。</p><pre># 《计算机系统基础》2026春期末试卷
+
+**授课教师**：杨哲慜 yzm
+
+注：原卷为全英文。
+
+---
+
+## 1. 二进制计算
+
+最后一空更复杂，是一大堆东西的异或 `^`。
+
+### $\cong$ 期中第一题、往年期中第一题
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddb8416f1bd.png)
+
+
+---
+
+## 2. y86汇编代码
+
+1) 作部分指令的机器代码和汇编代码转换；
+2) 写出函数的功能：计算 2 的 n 次幂。
+
+---
+
+## 3. cache
+
+给定了 cache 中存放的内容
+1) 计算 CO, CI, CT 的位数；
+2) 手工模拟两个 cache，其中一个命中另一个因为有效位为 0 而不命中
+3) 定义了二维数组 `A[N][N]` 和 `B[N][N]`，数组中放的 `sizeof(double) = 8`，cache 总大小 64B，二路组相联，分为 2 组，考虑下列程序片段：
+
+```c
+for (int i = 0; i &lt; N; ++i)
+    for (int j = 0; j &lt; N; ++j)
+        x += a[i][j] + b[j][i];
+```
+
+计算 `N = 2` 和 `N = 4` 时的命中率。
+
+Nova 注：第二问类似于中文版 CSAPP 课本 P429 **综合：运行中的直接映射高速缓存**
+
+### $\approx$ 袁春风编著《计算机组成与系统结构习题解答和教学指导（第二版），第 7 章，7.6 分析应用题，16，17
+
+第三问的命中率计算方法和这两道题比较像。
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddb910cd9aa.png)
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddb975709da.png)
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddba069f8b3.png)
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddbabf974dd.png)
+
+
+---
+
+## 4. 链接
+
+注意考察了在函数内和函数外的 `static` 变量。
+
+### $\cong$ 课本练习题 7.1，7.6
+
+上课重点讲过。
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddbb12fbc2d.png)
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddbb77c61d6.png)
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddbbe55bdd1.png)
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddbc406c788.png)
+
+
+---
+
+## 5. switch 语句
+
+已有汇编代码，写出 C 语言代码。
+注意 fall through 和 default。
+
+### $\approx$ 课本图 3.22 程序
+
+![](https://image.fduhole.com/i/2026/07/08/6a4ddbcde04506.png)
+
+---
+
+## 6. attack lab
+
+有 ROP 的和不是 ROP 的，共 6 个问，其中两问有点意思，*我也不太懂*：
+- 为什么你写好的 shellcode 代码发送到服务器上就无法进行攻击了？（题目说了自己的机器和服务器都是 64 位小端，没有栈随机化，栈可执行）
+- ROP，如果栈不可执行，还能不能攻击？
+
+关于最后一题的补充：
+
+##6139597
+
+
+</pre></html>

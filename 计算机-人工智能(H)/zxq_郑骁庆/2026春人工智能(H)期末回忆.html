@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>学生期末试卷回忆</title><style>body{max-width:960px;margin:3em auto;padding:0 1em;font:16px/1.8 system-ui}pre{white-space:pre-wrap;font:inherit;overflow-wrap:anywhere}</style><h1>学生期末试卷回忆</h1><p>树洞#680017 F3 · 匿名作者 · 学生回忆，非官方试卷。来源：<a href="https://www.fduhole.com/hole/680017">树洞原帖</a>；<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，仅调整排版。</p><pre># 《人工智能（H）》2026春期末试卷
+
+**授课教师**：郑骁庆 zxq
+
+注：原卷为全英文。
+
+题目内容基本完整，但是顺序可能有误差。
+
+1. **强化学习**：
+	- 监督学习、非监督学习、强化学习的区别；
+	- Bellman Equation 解释 $$v_\pi(s)=\sum_a\pi(a|s)\sum_{s&#x27;,r}p(s&#x27;,r|s,a)[r+\gamma v_\pi(s&#x27;)]$$
+	- 后一问忘了
+2. **CLIPS 程序题**：三小题，涉及到某个变量属于20～60的范围这种语法
+3. **消解原理**：给了 5 个 premise，按步骤转换为标准析取式、加入要证结论的否命题、消解算法，题目已给出要用到的所有 predicate。
+4. **深度学习**：
+	- 证明为什么两个线性层叠加的结果相当于一个线性层，说明为什么需要非线性激活函数；
+	- 异或 XOR 是线性不可分的（PPT 上有一模一样的，且上课详细讲过）；
+	- 层次化的网络不同层次学习到的什么特征（个人理解为郑老师写的《机器学习导论》7.3节最后的那幅图），解释一个深层网络的优点（书第七章开头）；
+	- RNN 为什么可以作序列建模，LSTM 和 GRU 分别解决了什么问题
+5. **遗传算法**：**旅行商问题**，要求写出基因编码、适应度函数、算法执行的各个步骤（PPT 上有一模一样的，但上课没详细讲这个例子；疑似去年也考过一样的）
+6. **HMM 和 Viterbi 解码**：给了样本量为 5 的数据，根据数据用最大似然写出初态、转移矩阵和发射矩阵，进行评估和解码的计算
+7. **神经网络**：
+	- 3 层神经元数量 $[2, 2, 1]$，损失函数为二分之一平方误差，计算正向传播、对所有参数的导数（上课强调过不要漏掉对 bias 的导数而只算了 weight 的导数）、作一次参数更新，问是否使损失降低了；
+	- 线性的 CNN，$X$ 是 $3\times 2$ 矩阵，卷积核是 $2\times 2$，$\text{stride}=1$，没有 padding，计算卷积的结果，然后分别用 max pooling 和 average pooling 计算
+8. **Transformer 位置向量**:
+	- $P(p+\tau)$ 能不能由 $P(p)$ 经过线性变换得到？（涉及到三角函数的计算推导，课上只提到了位置向量，没提到具体计算；疑似去年也考过一样的；和舍友讨论后发现只需要知道 $\sin(x+y)$ 和 $\cos(x+y)$ 展开的公式就能做出来😅），已知条件给的式子包括奇偶位置的 $$PE(pos,2i)=\sin\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$ 和 $$PE(pos,2i+1)=\cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$ 等公式基本上书 7.7 节都有；
+	- 注意力机制中 $$\text{Attention}(Q,K,V)=\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}} \right)V$$ 为什么要除以 $\sqrt{d_k}$ 再进入 softmax
+9. **Bayesian decision making**:
+	- 已知先验患病概率、已知是否患病的情况下检测为阳性的概率，求检测为阳性的概率、反过来的条件概率（涉及到概统中的条件概率计算公式）；
+	- 已知病人或健康的人经过医生 wait 或者 treat 之后的损失值，问对于一个检测为阳性的人，医生应该 wait 还是 treat；
+	- 先验概率在贝叶斯推断中的作用（？这一问可能描述得不准确）</pre></html>

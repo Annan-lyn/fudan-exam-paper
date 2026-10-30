@@ -1,0 +1,60 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>学生期末试卷回忆</title><style>body{max-width:960px;margin:3em auto;padding:0 1em;font:16px/1.8 system-ui}pre{white-space:pre-wrap;font:inherit;overflow-wrap:anywhere}</style><h1>学生期末试卷回忆</h1><p>树洞#680017 F13 · 匿名作者 · 学生回忆，非官方试卷。来源：<a href="https://www.fduhole.com/hole/680017">树洞原帖</a>；<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，仅调整排版。</p><pre># 《算法设计与分析》2026春期末试卷
+
+**授课教师**：王轶彤 wyt
+
+注：原卷为全英文。
+
+---
+
+## 1. 填空题
+
+1) **求解递推式**：$$T(n)=T(n/2)+T(n/4)+T(n/8)+O(n)$$
+2) 已知一个 **BST 后序遍历**序列，写出先序遍历序列；
+3) 判断：**Kruskal 算法**，如果把最小队列改成最大队列，能够得到 maximun spanning tree；
+4) 判断：**有向图的 BFS**，如果访问到某个之前已经访问过的结点，也不一定能说明存在有向圈；
+5) 判断：**Bellman-Ford 算法**可以检测到 $s$ 的路上有没有负权重圈；
+6) **one third merge sort**：归并排序，改成分成 $1/3$ 和 $2/3$ 的两个子问题，写出递推式，求解复杂度。
+
+---
+
+## 2. 计算和证明（或举反例）
+
+1) 举反例说明：**Dijkstra** 不能处理带有负权重边的情况；
+2) 给定一张图，计算**最大流和最小割**，要求写出计算过程；
+
+类似这种，但是题目里没有给出初始流量，只有每条边的容量。
+
+![](https://image.fduhole.com/i/2026/07/08/6a4dde84db5e93.png)
+
+
+3) 判断：对于 $n$ 个可比较元素的集合，**归并排序**，其中任意一个元素和其他元素的比较次数为 $O(\lg n)$；
+4) **最小瓶颈生成树**和 **MST** 的判断题，结论是：每棵MST都是MBST，但MBST不一定是MST；（**$=$ 2022 P2.1，$\cong$ 作业题**）
+
+![](https://image.fduhole.com/i/2026/07/08/6a4dde8c0751e5.png)
+
+
+5) 判断：图中所有边权重平方之后（ $C_e \to C_e^2$ ），原来的**最短路**是否仍是最短路？（**$\approx$ 2012 A 卷**，问的是 **MST** 是否仍是 MST）
+
+![](https://image.fduhole.com/i/2026/07/08/6a4dde910239d0.png)
+
+
+6) 判断：如果 $s \rightarrow a \rightarrow b \rightarrow c \rightarrow x$ 是图中 $s$ 到 $x$ 的最短路，则这条路一定也出现在 BFS 生成的树里；
+7) **矩阵链乘法**：给定了一个矩阵维数的序列 $&lt;10, 5, 15, 50, 6&gt;$（仅作示例，个数是 5 个，具体数值回忆不准确），写出最佳加括号顺序。
+
+![](https://image.fduhole.com/i/2026/07/08/6a4dde97d4e77c.png)
+
+
+---
+
+## 算法设计大题
+
+3. [1235. 规划兼职工作 - 力扣（LeetCode）](https://leetcode.cn/problems/maximum-profit-in-job-scheduling/description/)：试卷上的图和力扣中的 **示例 1** 完全相同。
+
+![](https://image.fduhole.com/i/2026/07/08/6a4dde9c07027b.png)
+
+4. 连通图，找最大 $k$，使删去所有权重 $\geq k$ 的边后图不再连通，要求复杂度为 $O(E \lg E)$。
+
+5. [55. 跳跃游戏 - 力扣（LeetCode）](https://leetcode.cn/problems/jump-game/description/)
+
+6. 图中指定一条边 $e$，问 $e$ 是不是在某个 MST 中？写出算法和复杂度分析。
+</pre></html>
