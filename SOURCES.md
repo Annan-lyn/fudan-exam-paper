@@ -12,5 +12,6 @@
 | [kanzaler123/fdu-course-resources](https://github.com/kanzaler123/fdu-course-resources) | 未写许可 | 会计学、宏观经济学、政治经济学、数据库、线性代数、高数 A 上、近代史纲要 |
 | [hecfhb](https://github.com/hecfhb) 的课程仓库 | 未写许可 | 高等数学 A 下 2019–2025 期末 |
 | [复旦数学科学学院往年试题](https://math.fudan.edu.cn/gdsx/34377/list.htm) | 学院官网公开 | 高等数学 A/B/C 2008–2018 |
+| [int32qwq](https://github.com/int32qwq) 补充的复习资料 | 资料版权归原作者所有 | 大物 B 上：2025-2026 学年第一学期期中考试讲评（24 页，按原页码分为 5 卷）；线性代数：2015-2016 学年第一学期期末 A 卷、2023-2024 学年第一学期期中试卷与批改答案、2025-2026 学年第一学期期中及期末试卷与批改答案 |
 
 文件和来源只能按课程大致对应，没有逐个文件记录出处。如果你是某份文件的原作者并希望署名或删除，请提 Issue。
