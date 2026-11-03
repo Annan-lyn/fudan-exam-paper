@@ -1,0 +1,32 @@
+name: Check exam website
+
+on:
+  pull_request:
+    paths:
+      - "web/**"
+      - ".github/workflows/web-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          sparse-checkout: |
+            web
+            .github
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "22"
+      - name: Test and build
+        working-directory: web
+        run: |
+          npm test
+          python3 -B -m unittest discover -s tests -p "test_*.py"
+          npm run build
+          node --check dist/assets/app.js

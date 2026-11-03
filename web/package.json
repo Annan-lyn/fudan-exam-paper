@@ -1,0 +1,12 @@
+{
+  "name": "fudan-exam-finder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "node scripts/build-data.mjs",
+    "build": "npm run data && node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "dev": "npm run build && python3 -m http.server 4377 --bind 127.0.0.1 --directory dist",
+    "preview": "python3 -m http.server 4377 --bind 127.0.0.1 --directory dist"
+  }
+}
